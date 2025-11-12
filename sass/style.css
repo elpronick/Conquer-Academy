@@ -1,0 +1,12 @@
+html * {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,15 @@
+// ============ POR DEFECTO ================
+@use '../abstracts/index' as abs;
+
+html * {
+  font-family: abs.$primary-font;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+}
