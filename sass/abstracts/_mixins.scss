@@ -28,3 +28,34 @@
 }
 
 // MIXINS--------------------
+// ================= BOTONES =================
+@mixin button(
+  $bg: abs.$blue-dark,
+  $color: abs.$white,
+  $padding-y: 0.75rem,
+  $padding-x: 1.5rem,
+  $radius: 10px,
+  $hover-bg: null,
+  $outline: false
+) {
+  display: inline-block;
+  background: if($outline == true, transparent, $bg);
+  color: if($outline == true, $bg, $color);
+  padding: $padding-y $padding-x;
+  border-radius: $radius;
+  border: if($outline == true, 2px solid $bg, none);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  font-size: 1rem;
+
+  &:hover {
+    @if $outline == true {
+      background: $bg;
+      color: $color;
+    } @else {
+      background: if($hover-bg != null, $hover-bg, darken($bg, 8%));
+    }
+  }
+}

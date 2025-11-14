@@ -4,6 +4,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.158);
+  border-radius: 10px;
   /* Para que nada se rompa en móviles */
   position: relative;
 }
@@ -113,7 +115,7 @@
 .main .latest-courses {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3.5rem;
 }
 .main .latest-courses h2 {
   font-size: 1.8rem;
@@ -121,7 +123,7 @@
 }
 .main .latest-courses .courses__grid {
   display: grid;
-  gap: 2rem;
+  gap: 3.5rem;
   grid-template-columns: 1fr;
 }
 @media (min-width: 768px) {
@@ -140,7 +142,9 @@
   padding: 1.2rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 1rem;
+  height: 100%;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -149,6 +153,12 @@
   height: 160px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.main .latest-courses .course-card__content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 .main .latest-courses .course-card h3 {
   font-size: 1.2rem;
@@ -161,6 +171,10 @@
 .main .latest-courses .course-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+.main .latest-courses .btn {
+  text-align: center;
+  margin-top: auto;
 }
 .main .latest-news {
   display: flex;
@@ -201,6 +215,75 @@
 }
 .main .latest-news .news-card:hover {
   transform: translateY(-4px);
+}
+
+.btn {
+  display: inline-block;
+  background: #13183F;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  font-size: 1rem;
+}
+.btn:hover {
+  background: #666CA3;
+}
+
+.btn-secondary {
+  display: inline-block;
+  background: #83869A;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  font-size: 1rem;
+}
+.btn-secondary:hover {
+  background: rgb(109.6186666667, 112.8746666667, 134.5813333333);
+}
+
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: #13183F;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  border: 2px solid #13183F;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  font-size: 1rem;
+}
+.btn-outline:hover {
+  background: #13183F;
+  color: #13183F;
+}
+
+.btn-gradient {
+  display: inline-block;
+  background: linear-gradient(180deg, #4851FF 0%, #F02AA6 99.92%);
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  font-size: 1rem;
+}
+.btn-gradient:hover {
+  background: linear-gradient(180deg, #FF6F48 0.04%, #F02AA6 100%);
 }
 
 html * {

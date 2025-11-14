@@ -1,1 +1,33 @@
 @use '../abstracts/index' as abs;
+
+.btn {
+  @include abs.button(
+    $bg: abs.$blue-dark,
+    $color: abs.$white,
+    $hover-bg: abs.$blue-violet
+  );
+}
+
+.btn-secondary {
+  @include abs.button(
+    $bg: abs.$gray,
+    $color: abs.$white,
+    $hover-bg: darken(abs.$gray, 8%)
+  );
+}
+
+.btn-outline {
+  @include abs.button(
+    $bg: abs.$blue-dark,
+    $color: abs.$blue-dark,
+    $outline: true
+  );
+}
+
+.btn-gradient {
+  @include abs.button(
+    $bg: abs.$blue-fucsia,
+    $color: abs.$white,
+    $hover-bg: abs.$orange-fucsia
+  );
+}
