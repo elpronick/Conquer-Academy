@@ -8,97 +8,121 @@
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="header__logo">
-            <img src="./img/Logo-ConquerX.svg" alt="Logo Conquer Academy">
-        </div>
+  <!-- HEADER -->
+  <header class="header">
+    
+    <!-- BOTÓN DEL MENÚ (versión móvil) -->
+    <button class="header__menu-btn" aria-label="Abrir menú">
+      <img src="./img/menu.svg" alt="Icono menú">
+    </button>
 
-        <nav class="navbar">
-            <ul class="navbar__list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="quienes-somos.html">Quiénes somos</a></li>
-                <li><a href="cursos.html">Cursos</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="registro.html">Registro</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="header__logo">
+        <img src="./img/Logo-ConquerX.svg" alt="Logo Conquer Academy">
+    </div>
 
-    <main class="main">
+    <nav class="header__navbar">
+        <ul class="header__navbar__list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="quienes-somos.html">Quiénes somos</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="registro.html">Registro</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
 
-        <!-- HERO / INTRO -->
-        <section class="hero">
-            <div class="hero__content">
-                <h1>Bienvenido a Conquer Academy</h1>
-                <p>Formación práctica, directa y enfocada en las habilidades que realmente importan.</p>
-            </div>
-            <div class="hero__image">
-                <img src="./img/hero.jpg" alt="Imagen representativa de Conquer Academy">
-            </div>
-        </section>
+    <div class="header__search">
+        <img src="./img/buscar.svg" alt="Logo Conquer Academy">
+    </div>
+  </header>
 
-        <!-- RESUMEN QUIÉNES SOMOS -->
-        <section class="about-preview">
-            <h2>Quiénes somos</h2>
-            <p>
-                Somos una academia enfocada en formación moderna, eficiente y orientada al mundo real.
-                Conoce más sobre nuestra misión, valores y el equipo que lo hace posible.
-            </p>
-            <a class="btn" href="quienes-somos.html">Ver más</a>
-        </section>
+  <main class="main">
 
-        <!-- ÚLTIMOS CURSOS -->
-        <section class="latest-courses">
-            <h2>Últimos cursos</h2>
+      <!-- HERO / INTRO -->
+      <section class="hero">
+          <div class="hero__content">
+              <h1>Bienvenido a Conquer Academy</h1>
+              <p>Formación práctica, directa y enfocada en las habilidades que realmente importan.</p>
+          </div>
+          <div class="hero__image">
+              <img src="./img/hero.jpg" alt="Imagen representativa de Conquer Academy">
+          </div>
+      </section>
 
-            <div class="courses__grid">
-                <article class="course-card">
-                    <h3>Curso 1</h3>
-                    <p>Descripción breve del último curso disponible.</p>
-                    <a href="curso-detalle.html" class="btn">Ver curso</a>
-                </article>
+      <!-- RESUMEN QUIÉNES SOMOS -->
+      <section class="about-preview">
+          <h2>Quiénes somos</h2>
+          <p>
+              Somos una academia enfocada en formación moderna, eficiente y orientada al mundo real.
+              Conoce más sobre nuestra misión, valores y el equipo que lo hace posible.
+          </p>
+          <a class="btn" href="quienes-somos.html">Ver más</a>
+      </section>
 
-                <article class="course-card">
-                    <h3>Curso 2</h3>
-                    <p>Descripción breve del segundo curso reciente.</p>
-                    <a href="curso-detalle.html" class="btn">Ver curso</a>
-                </article>
-            </div>
+      <!-- ÚLTIMOS CURSOS -->
+      <section class="latest-courses">
+          <h2>Últimos cursos</h2>
 
-            <a href="cursos.html" class="btn btn-secondary">Ver todos los cursos</a>
-        </section>
+          <div class="courses__grid">
+              <article class="course-card">
+                  <h3>Máster en Desarrollo Web Full Stack</h3>
+                  <p>Descripción breve del último curso disponible.</p>
+                  <a href="curso-detalle.html" class="btn">Ver curso</a>
+              </article>
 
-        <!-- ÚLTIMAS NOTICIAS -->
-        <section class="latest-news">
-            <h2>Últimas noticias</h2>
+              <article class="course-card">
+                  <h3>Máster en Inteligencia Artificial</h3>
+                  <p>Descripción breve del segundo curso reciente.</p>
+                  <a href="curso-detalle.html" class="btn">Ver curso</a>
+              </article>
 
-            <div class="news__grid">
-                <article class="news-card">
-                    <h3>Noticia 1</h3>
-                    <p>Resumen breve de la noticia más reciente.</p>
-                    <a href="noticia-detalle.html" class="btn">Leer más</a>
-                </article>
+              <article class="course-card">
+                  <h3>Máster en Ciberseguridad</h3>
+                  <p>Descripción breve del segundo curso reciente.</p>
+                  <a href="curso-detalle.html" class="btn">Ver curso</a>
+              </article>
 
-                <article class="news-card">
-                    <h3>Noticia 2</h3>
-                    <p>Resumen breve de la segunda noticia reciente.</p>
-                    <a href="noticia-detalle.html" class="btn">Leer más</a>
-                </article>
-            </div>
+              <article class="course-card">
+                  <h3>Productividad y emprendimiento</h3>
+                  <p>Descripción breve del último curso disponible.</p>
+                  <a href="curso-detalle.html" class="btn">Ver curso</a>
+              </article>
+          </div>
 
-            <a href="blog.html" class="btn btn-secondary">Ver todas las noticias</a>
-        </section>
+          <a href="cursos.html" class="btn btn-secondary">Ver todos los cursos</a>
+      </section>
 
-    </main>
+      <!-- ÚLTIMAS NOTICIAS -->
+      <section class="latest-news">
+          <h2>Últimas noticias</h2>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <p>&copy; 2025 Conquer Academy. Todos los derechos reservados.</p>
-        <p><a href="aviso-legal.html">Aviso legal</a></p>
-    </footer>
+          <div class="news__grid">
+              <article class="news-card">
+                  <h3>Noticia 1</h3>
+                  <p>Resumen breve de la noticia más reciente.</p>
+                  <a href="noticia-detalle.html" class="btn">Leer más</a>
+              </article>
+
+              <article class="news-card">
+                  <h3>Noticia 2</h3>
+                  <p>Resumen breve de la segunda noticia reciente.</p>
+                  <a href="noticia-detalle.html" class="btn">Leer más</a>
+              </article>
+          </div>
+
+          <a href="blog.html" class="btn btn-secondary">Ver todas las noticias</a>
+      </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+      <p>&copy; 2025 Conquer Academy. Todos los derechos reservados.</p>
+      <p><a href="aviso-legal.html">Aviso legal</a></p>
+  </footer>
+
+  <script src="./js/menu.js"></script>
 
 </body>
 </html>
