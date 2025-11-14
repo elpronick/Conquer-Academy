@@ -1,0 +1,65 @@
+@use '../abstracts/index' as abs;
+
+.login {
+  padding: 2rem 1.2rem;
+  display: flex;
+  justify-content: center;
+
+  &__form {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: abs.$blue-dark;
+    }
+
+    p {
+      color: abs.$gray;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+      text-align: left;
+
+      label {
+        font-weight: 600;
+        color: abs.$blue-dark;
+      }
+
+      input {
+        padding: .8rem 1rem;
+        border-radius: 10px;
+        border: 2px solid abs.$gray;
+        outline: none;
+        transition: border .25s ease;
+
+        &:focus {
+          border-color: abs.$blue-dark;
+        }
+      }
+    }
+
+    .texto-secundario {
+      font-size: .9rem;
+
+      a {
+        color: abs.$blue-dark;
+        text-decoration: underline;
+      }
+    }
+  }
+}

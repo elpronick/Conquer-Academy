@@ -1,0 +1,62 @@
+@use '../abstracts/index' as abs;
+
+.contacto {
+  padding: 2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  &__hero {
+    text-align: center;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: abs.$blue-dark;
+    }
+
+    p {
+      color: abs.$gray;
+    }
+  }
+
+  &__form {
+    max-width: 500px;
+    margin: 0 auto;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+
+      label {
+        font-weight: 600;
+        color: abs.$blue-dark;
+      }
+
+      input,
+      textarea {
+        padding: .8rem 1rem;
+        border-radius: 10px;
+        border: 2px solid abs.$gray;
+        outline: none;
+        font-size: 1rem;
+        transition: border .25s ease;
+
+        &:focus {
+          border-color: abs.$blue-dark;
+        }
+      }
+
+      textarea {
+        resize: none;
+      }
+    }
+  }
+}
