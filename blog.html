@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Conquer Academy</title>
+    <link rel="stylesheet" href="./sass/style.css">
+</head>
+<body>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="header">
+    <button class="header__menu-btn" aria-label="Abrir menú">
+      <img src="./img/menu.svg" alt="Icono menú">
+    </button>
+
+    <div class="header__logo">
+      <img src="./img/Logo-ConquerX.svg" alt="Logo Conquer Academy">
+    </div>
+
+    <nav class="header__navbar">
+      <ul class="header__navbar__list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="registro.html">Registro</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__search">
+      <img src="./img/buscar.svg" alt="Buscar">
+    </div>
+  </header>
+
+  <!-- ============================ MAIN ============================ -->
+  <main class="blog">
+
+    <!-- HERO -->
+    <section class="blog__hero">
+      <h1>Blog</h1>
+      <p>Encuentra artículos, novedades, consejos y contenido útil sobre desarrollo, IA, productividad y más.</p>
+    </section>
+
+    <!-- GRID DE ARTÍCULOS -->
+    <section class="blog__articulos">
+
+      <div class="blog__grid">
+
+        <article class="blog-card">
+          <img src="./img/desarrollo-web.jpg" alt="">
+          <div class="blog-card__content">
+            <h3>Cómo iniciarte en el desarrollo web</h3>
+            <p>Primeros pasos, consejos y roadmap para comenzar tu carrera como desarrollador.</p>
+          </div>
+          <a href="noticia-detalle.html" class="btn">Leer artículo</a>
+        </article>
+
+        <article class="blog-card">
+          <img src="./img/IA-2.jpg" alt="">
+          <div class="blog-card__content">
+            <h3>IA: Qué es y por qué está cambiando el mundo</h3>
+            <p>Una introducción clara a los modelos de IA, machine learning y sus aplicaciones.</p>
+          </div>
+          <a href="noticia-detalle.html" class="btn">Leer artículo</a>
+        </article>
+
+        <article class="blog-card">
+          <img src="./img/ciberseguridad-1.jpg" alt="">
+          <div class="blog-card__content">
+            <h3>Ciberseguridad en 2025: Lo que debes saber</h3>
+            <p>Amenazas actuales, buenas prácticas y cómo proteger tu entorno digital.</p>
+          </div>
+          <a href="noticia-detalle.html" class="btn">Leer artículo</a>
+        </article>
+
+        <article class="blog-card">
+          <img src="./img/productividad.jpg" alt="">
+          <div class="blog-card__content">
+            <h3>Productividad: Cómo estudiar mejor</h3>
+            <p>Técnicas modernas para retener información y gestionar tu tiempo correctamente.</p>
+          </div>
+          <a href="noticia-detalle.html" class="btn">Leer artículo</a>
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="footer">
+    <p>&copy; 2025 Conquer Academy. Todos los derechos reservados.</p>
+    <p><a href="aviso-legal.html">Aviso legal</a></p>
+  </footer>
+
+  <script src="./js/menu.js"></script>
+
+</body>
+</html>
