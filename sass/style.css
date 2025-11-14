@@ -326,6 +326,137 @@
   background: linear-gradient(180deg, #FF6F48 0.04%, #F02AA6 100%);
 }
 
+.quienes {
+  padding: 2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.quienes__hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.quienes__hero h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #13183F;
+}
+.quienes__hero p {
+  max-width: 60ch;
+  margin: 0 auto;
+  color: #83869A;
+}
+.quienes__mision {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+.quienes__mision__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.quienes__mision__content h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #13183F;
+}
+.quienes__mision__content p {
+  color: #83869A;
+  line-height: 1.5;
+}
+.quienes__mision__img img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 1200px) {
+  .quienes__mision {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.quienes__valores {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.quienes__valores h2 {
+  font-size: 1.8rem;
+  color: #13183F;
+}
+.quienes__valores .valores__grid {
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .quienes__valores .valores__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.quienes__valores .valor-card {
+  background: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.quienes__valores .valor-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #13183F;
+}
+.quienes__valores .valor-card p {
+  color: #83869A;
+}
+.quienes__equipo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.quienes__equipo h2 {
+  font-size: 1.8rem;
+  color: #13183F;
+}
+.quienes__equipo .equipo__grid {
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .quienes__equipo .equipo__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.quienes__equipo .equipo-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.quienes__equipo .equipo-card img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+}
+.quienes__equipo .equipo-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.quienes__equipo .equipo-card p {
+  color: #83869A;
+}
+
 html * {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
