@@ -402,9 +402,14 @@
   padding: 1.5rem;
   border-radius: 14px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+.quienes__valores .valor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
 }
 .quienes__valores .valor-card h3 {
   font-size: 1.2rem;
