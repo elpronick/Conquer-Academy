@@ -132,7 +132,7 @@
   color: #83869A;
   max-width: 45ch;
 }
-.main .hero__image img {
+.main .hero__image video {
   width: 100%;
   border-radius: 16px;
   -o-object-fit: cover;
