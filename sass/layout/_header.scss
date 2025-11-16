@@ -14,7 +14,7 @@
     left: -7%;
     width: 110%;
     height: 90px;
-    background-color: rgba(0, 0, 0, 0.158);
+    background: abs.$green-blue;
     z-index: -1;
   }
 
@@ -81,7 +81,7 @@
         }
 
         &:hover {
-          color: abs.$blue-violet;
+          color: abs.$gray;
 
           &::after {
             width: 100%;

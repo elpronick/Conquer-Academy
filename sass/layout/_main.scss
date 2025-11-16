@@ -22,12 +22,13 @@
         font-weight: 700;
         color: abs.$blue-dark;
         line-height: 1.2;
+        text-align: center;
       }
-
+      
       p {
+        text-align: center;
         font-size: 1rem;
         color: abs.$gray;
-        max-width: 45ch;
       }
     }
 

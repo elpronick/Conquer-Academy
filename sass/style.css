@@ -12,7 +12,7 @@
   left: -7%;
   width: 110%;
   height: 90px;
-  background-color: rgba(0, 0, 0, 0.158);
+  background: linear-gradient(180deg, #e6ffa2 0.04%, #69d2f8 100%);
   z-index: -1;
 }
 .header__menu-btn {
@@ -69,7 +69,7 @@
   transition: width 0.25s ease;
 }
 .header__navbar__list a:hover {
-  color: #666CA3;
+  color: #83869A;
 }
 .header__navbar__list a:hover::after {
   width: 100%;
@@ -82,7 +82,7 @@
 .footer {
   padding: 2rem 1.2rem;
   margin-top: 3rem;
-  background: #13183F;
+  background: #171718;
   color: #FFFFFF;
   text-align: center;
   display: flex;
@@ -133,11 +133,12 @@
   font-weight: 700;
   color: #13183F;
   line-height: 1.2;
+  text-align: center;
 }
 .main .hero__content p {
+  text-align: center;
   font-size: 1rem;
   color: #83869A;
-  max-width: 45ch;
 }
 .main .hero__image video {
   width: 100%;
@@ -290,7 +291,7 @@
 
 .btn {
   display: inline-block;
-  background: #13183F;
+  background: #69d2f8;
   color: #FFFFFF;
   padding: 0.75rem 1.5rem;
   border-radius: 10px;
@@ -302,7 +303,7 @@
   font-size: 1rem;
 }
 .btn:hover {
-  background: #666CA3;
+  background: #83869A;
 }
 
 .btn-secondary {
@@ -319,7 +320,7 @@
   font-size: 1rem;
 }
 .btn-secondary:hover {
-  background: rgb(109.6186666667, 112.8746666667, 134.5813333333);
+  background: #83869A;
 }
 
 .btn-outline {
@@ -338,23 +339,6 @@
 .btn-outline:hover {
   background: #13183F;
   color: #13183F;
-}
-
-.btn-gradient {
-  display: inline-block;
-  background: linear-gradient(180deg, #4851FF 0%, #F02AA6 99.92%);
-  color: #FFFFFF;
-  padding: 0.75rem 1.5rem;
-  border-radius: 10px;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.25s ease;
-  font-size: 1rem;
-}
-.btn-gradient:hover {
-  background: linear-gradient(180deg, #FF6F48 0.04%, #F02AA6 100%);
 }
 
 .quienes {
