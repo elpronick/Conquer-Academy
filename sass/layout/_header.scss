@@ -5,9 +5,18 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.158);
-  border-radius: 10px;
   position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: -7%;
+    width: 110%;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.158);
+    z-index: -1;
+  }
 
   // BOTÓN MENÚ
   &__menu-btn {
@@ -33,12 +42,11 @@
     &.is-active {
       display: block;
       position: absolute;
-      top: 70px;
-      left: 0;
-      width: 100%;
-      background: white;
-      padding: 1rem 1.2rem;
-      border-radius: 12px;
+      top: 82px;
+      left: -7%;
+      width: 110%;
+      background: abs.$white;
+      padding: 1rem 2rem;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     }
 
