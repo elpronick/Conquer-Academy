@@ -8,10 +8,11 @@
 .header::before {
   content: "";
   position: absolute;
-  top: -10%;
-  left: -7%;
-  width: 110%;
-  height: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -1rem;
+  width: 100vw;
+  height: calc(100% + 1.2rem);
   background: linear-gradient(180deg, #e6ffa2 0.04%, #69d2f8 100%);
   z-index: -1;
 }
@@ -33,12 +34,14 @@
 .header__navbar.is-active {
   display: block;
   position: absolute;
-  top: 82px;
-  left: -7%;
-  width: 110%;
+  top: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
   background: #FFFFFF;
-  padding: 1rem 2rem;
+  padding: 1.2rem 2rem;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  z-index: 100;
 }
 .header__navbar__list {
   display: flex;
@@ -80,14 +83,26 @@
 }
 
 .footer {
+  position: relative;
   padding: 2rem 1.2rem;
-  margin-top: 3rem;
-  background: #171718;
-  color: #FFFFFF;
   text-align: center;
+  color: #FFFFFF;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  /* Fondo full-width a lo header */
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  height: 100%;
+  transform: translateX(-50%);
+  background: #171718;
+  z-index: -1;
 }
 .footer p {
   margin: 0;
@@ -105,7 +120,6 @@
 @media (min-width: 1200px) {
   .footer {
     padding: 2.5rem 2rem;
-    font-size: 1rem;
   }
   .footer p {
     font-size: 1rem;
