@@ -317,7 +317,7 @@
   font-size: 1rem;
 }
 .btn:hover {
-  background: #83869A;
+  background: rgb(46.5286624204, 192.4585987261, 245.2713375796);
 }
 
 .btn-secondary {
@@ -334,7 +334,7 @@
   font-size: 1rem;
 }
 .btn-secondary:hover {
-  background: #83869A;
+  background: rgb(100.4613333333, 103.4453333333, 123.3386666667);
 }
 
 .btn-outline {

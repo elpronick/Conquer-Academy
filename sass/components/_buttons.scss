@@ -1,10 +1,11 @@
 @use '../abstracts/index' as abs;
+@use 'sass:color';
 
 .btn {
   @include abs.button(
     $bg: abs.$blue,
     $color: abs.$white,
-    $hover-bg: abs.$gray
+    $hover-bg: color.adjust(abs.$blue, $lightness: -12%)
   );
 }
 
@@ -12,7 +13,7 @@
   @include abs.button(
     $bg: abs.$gray,
     $color: abs.$white,
-    $hover-bg: abs.$gray
+    $hover-bg: color.adjust(abs.$gray, $lightness: -12%)
   );
 }
 
