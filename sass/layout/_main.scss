@@ -1,205 +1,245 @@
 @use '../abstracts/index' as abs;
 @use 'sass:color';
 
+/* ============================================================
+MAIN LAYOUT
+============================================================ */
+
 .main {
   padding: 2rem 1.2rem;
   display: flex;
   flex-direction: column;
   gap: 4rem;
+}
 
-  // ================= HERO =================
+
+/* ============================================================
+HERO (BASE)
+============================================================ */
+
+.hero {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: abs.$blue-dark;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 1rem;
+    color: abs.$gray;
+  }
+}
+
+.hero__image video {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+
+/* ============================================================
+ABOUT (BASE)
+============================================================ */
+
+.about-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: abs.$blue-dark;
+  }
+
+  p {
+    font-size: 1rem;
+    max-width: 60ch;
+    color: abs.$gray;
+  }
+
+  .btn {
+    margin-top: 0.5rem;
+    align-self: flex-start;
+  }
+}
+
+
+/* ============================================================
+COURSES (BASE)
+============================================================ */
+
+.latest-courses {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+
+  h2 {
+    font-size: 1.8rem;
+    color: abs.$blue-dark;
+  }
+}
+
+.courses__grid {
+  display: grid;
+  gap: 3.5rem;
+  grid-template-columns: 1fr;
+}
+
+.course-card {
+  background: abs.$white;
+  border-radius: 16px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 100%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: transform .25s ease, box-shadow .25s ease;
+
+  img {
+    border-radius: 12px;
+    height: 160px;
+    object-fit: cover;
+  }
+
+  &__content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: abs.$gray;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+  }
+}
+
+.latest-courses .btn {
+  text-align: center;
+  margin-top: auto;
+}
+
+
+/* ============================================================
+NEWS (BASE)
+============================================================ */
+
+.latest-news {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  h2 {
+    font-size: 1.8rem;
+    color: abs.$blue-dark;
+  }
+}
+
+.news__grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+.news-card {
+  background: abs.$white;
+  border-radius: 16px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: transform .25s ease;
+
+  &__content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1rem;
+    color: abs.$gray;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+
+/* ============================================================
+BREAKPOINTS — TABLET
+============================================================ */
+
+@include abs.breakpoint(tablet) {
+  
+  /* COURSES GRID */
+  .courses__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* NEWS GRID */
+  .news__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ============================================================
+BREAKPOINTS — DESKTOP
+============================================================ */
+
+@include abs.breakpoint(desktop) {
+
+  /* HERO */
   .hero {
-    display: grid;
-    gap: 2rem;
-    align-items: center;
-
-    &__content {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-
-      h1 {
-        font-size: 2rem;
-        font-weight: 700;
-        color: abs.$blue-dark;
-        line-height: 1.2;
-        text-align: center;
-      }
-      
-      p {
-        text-align: center;
-        font-size: 1rem;
-        color: abs.$gray;
-      }
-    }
-
-    &__image video {
-      width: 100%;
-      border-radius: 16px;
-      object-fit: cover;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    }
-
-    @include abs.breakpoint(desktop) {
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-
-      &__content h1 {
-        font-size: 3rem;
-      }
-
-      &__content p {
-        font-size: 1.1rem;
-      }
-    }
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
   }
 
-  // ================= ABOUT =================
-  .about-preview {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    h2 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: abs.$blue-dark;
-    }
-
-    p {
-      font-size: 1rem;
-      max-width: 60ch;
-      color: abs.$gray;
-    }
-
-    .btn {
-      margin-top: 0.5rem;
-      align-self: flex-start;
-    }
+  .hero__content h1 {
+    font-size: 3rem;
   }
 
-  // ================= CURSOS =================
-  .latest-courses {
-    display: flex;
-    flex-direction: column;
-    gap: 3.5rem;
-
-    h2 {
-      font-size: 1.8rem;
-      color: abs.$blue-dark;
-    }
-
-    .courses__grid {
-      display: grid;
-      gap: 3.5rem;
-      grid-template-columns: 1fr;
-
-      @include abs.breakpoint(tablet) {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      @include abs.breakpoint(desktop) {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-
-    .course-card {
-      background: abs.$white;
-      border-radius: 16px;
-      padding: 1.2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 1rem;
-      height: 100%;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-      transition: transform .25s ease, box-shadow .25s ease;
-
-      img {
-        border-radius: 12px;
-        height: 160px;
-        object-fit: cover;
-      }
-
-      &__content {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 0.8rem;
-      }
-
-      h3 {
-        font-size: 1.2rem;
-        font-weight: 600;
-      }
-
-      p {
-        font-size: 0.95rem;
-        color: abs.$gray;
-      }
-
-      &:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 25px rgba(0,0,0,0.08);
-      }
-    }
-    .btn {
-      text-align: center;
-      margin-top: auto;
-    }
+  .hero__content p {
+    font-size: 1.1rem;
   }
 
-  // ================= NOTICIAS =================
-  .latest-news {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-
-    h2 {
-      font-size: 1.8rem;
-      color: abs.$blue-dark;
-    }
-
-    .news__grid {
-      display: grid;
-      gap: 2rem;
-      grid-template-columns: 1fr;
-
-      @include abs.breakpoint(tablet) {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .news-card {
-      background: abs.$white;
-      border-radius: 16px;
-      padding: 1.2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-      transition: transform .25s ease;
-
-      &__content {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 0.8rem;
-      }
-
-      h3 {
-        font-size: 1.2rem;
-        font-weight: 600;
-      }
-
-      p {
-        font-size: 1rem;
-        color: abs.$gray;
-      }
-
-      &:hover {
-        transform: translateY(-4px);
-      }
-    }
+  /* COURSES GRID */
+  .courses__grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
