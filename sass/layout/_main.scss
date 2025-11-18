@@ -91,6 +91,10 @@ ABOUT (BASE)
   .btn {
     margin-top: 1.5rem;
   }
+  
+  &::before {
+    animation: barSlideIn 0.8s ease forwards 0.4s;
+  }
 }
 
 
@@ -103,7 +107,7 @@ COURSES (BASE)
   flex-direction: column;
   gap: 3.5rem;
   position: relative;
-
+  
   &::before {
     content: "";
     position: absolute;
@@ -113,6 +117,10 @@ COURSES (BASE)
     height: 6px;       
     border-radius: 10px;
     background: abs.$blue; 
+  }
+  
+  &::before {
+    animation: barSlideIn 0.6s ease forwards 0.4s;
   }
 
   h2 {
@@ -187,7 +195,9 @@ NEWS (BASE)
     font-size: 1.8rem;
     color: abs.$blue-dark;
   }
+  
 }
+
 
 .news__grid {
   display: grid;

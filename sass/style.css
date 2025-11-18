@@ -214,6 +214,9 @@ ABOUT (BASE)
 .about-preview .btn {
   margin-top: 1.5rem;
 }
+.about-preview::before {
+  animation: barSlideIn 0.8s ease forwards 0.4s;
+}
 
 /* ============================================================
 COURSES (BASE)
@@ -233,6 +236,9 @@ COURSES (BASE)
   height: 6px;
   border-radius: 10px;
   background: #69d2f8;
+}
+.latest-courses::before {
+  animation: barSlideIn 0.6s ease forwards 0.4s;
 }
 .latest-courses h2 {
   font-size: 1.8rem;
