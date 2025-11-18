@@ -1,16 +1,20 @@
 @use '../abstracts/index' as abs;
 @use 'sass:color';
 
+// =============================
+//  MOBILE (BASE)
+// =============================
 .contacto {
   padding: 2rem 1.2rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
   align-items: center;
-  justify-content: center;
 
+  // ---------- HERO ----------
   &__hero {
     text-align: center;
+    max-width: 55ch;
 
     h1 {
       font-size: 2rem;
@@ -20,12 +24,15 @@
 
     p {
       color: abs.$gray;
+      line-height: 1.4;
     }
   }
 
+  // ---------- FORMULARIO ----------
   &__form {
-    width: 50%;
-    margin: 0;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
 
     form {
       display: flex;
@@ -59,7 +66,46 @@
 
       textarea {
         resize: none;
+        min-height: 140px;
       }
+    }
+  }
+}
+
+// =============================
+//  TABLET
+// =============================
+@include abs.breakpoint(tablet) {
+  .contacto {
+    padding: 3rem 2rem;
+
+    &__form {
+      max-width: 550px;
+    }
+
+    &__hero h1 {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+// =============================
+//  DESKTOP
+// =============================
+@include abs.breakpoint(desktop) {
+  .contacto {
+    padding: 4rem 0;
+
+    &__hero {
+      max-width: 60ch;
+
+      h1 {
+        font-size: 3rem;
+      }
+    }
+
+    &__form {
+      max-width: 600px;
     }
   }
 }

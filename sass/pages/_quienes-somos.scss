@@ -1,13 +1,16 @@
 @use '../abstracts/index' as abs;
 @use 'sass:color';
 
+// =============================
+//  MOBILE (BASE)
+// =============================
 .quienes {
   padding: 2rem 1.2rem;
   display: flex;
   flex-direction: column;
   gap: 4rem;
 
-  // HERO
+  // ---------- HERO ----------
   &__hero {
     text-align: center;
     display: flex;
@@ -21,13 +24,14 @@
     }
 
     p {
+      color: abs.$gray;
       max-width: 60ch;
       margin: 0 auto;
-      color: abs.$gray;
+      line-height: 1.5;
     }
   }
 
-  // MISIÓN
+  // ---------- MISIÓN ----------
   &__mision {
     display: grid;
     gap: 2rem;
@@ -56,13 +60,9 @@
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
       object-fit: cover;
     }
-
-    @include abs.breakpoint(desktop) {
-      grid-template-columns: 1fr 1fr;
-    }
   }
 
-  // VALORES
+  // ---------- VALORES ----------
   &__valores {
     display: flex;
     flex-direction: column;
@@ -76,25 +76,21 @@
     .valores__grid {
       display: grid;
       gap: 2rem;
-      
-      @include abs.breakpoint(tablet) {
-        grid-template-columns: repeat(3, 1fr);
-      }
     }
-    
+
     .valor-card {
       background: abs.$white;
       padding: 1.5rem;
       border-radius: 14px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-      transition: transform .25s ease, box-shadow .25s ease;
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      transition: transform .25s ease, box-shadow .25s ease;
 
       &:hover {
         transform: translateY(-4px);
-        box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
       }
 
       h3 {
@@ -109,7 +105,7 @@
     }
   }
 
-  // EQUIPO
+  // ---------- EQUIPO ----------
   &__equipo {
     display: flex;
     flex-direction: column;
@@ -123,10 +119,6 @@
     .equipo__grid {
       display: grid;
       gap: 2rem;
-
-      @include abs.breakpoint(tablet) {
-        grid-template-columns: repeat(3, 1fr);
-      }
     }
 
     .equipo-card {
@@ -135,6 +127,7 @@
       padding: 1.5rem;
       text-align: center;
       box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+
       display: flex;
       flex-direction: column;
       gap: 1rem;
@@ -154,6 +147,52 @@
       p {
         color: abs.$gray;
       }
+    }
+  }
+}
+
+// =============================
+//  TABLET
+// =============================
+@include abs.breakpoint(tablet) {
+  .quienes {
+
+    &__mision {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__valores .valores__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__equipo .equipo__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+// =============================
+//  DESKTOP
+// =============================
+@include abs.breakpoint(desktop) {
+  .quienes {
+    padding: 4rem 2rem;
+
+    &__hero h1 {
+      font-size: 3rem;
+    }
+
+    &__mision {
+      gap: 3rem;
+
+      &__content h2 {
+        font-size: 2rem;
+      }
+    }
+
+    &__valores h2,
+    &__equipo h2 {
+      font-size: 2rem;
     }
   }
 }

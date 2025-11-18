@@ -1,11 +1,15 @@
 @use '../abstracts/index' as abs;
 @use 'sass:color';
 
+// =============================
+//  MOBILE (BASE)
+// =============================
 .registro {
   padding: 2rem 1.2rem;
   display: flex;
   justify-content: center;
 
+  // ---------- FORM ----------
   &__form {
     width: 100%;
     max-width: 380px;
@@ -22,14 +26,17 @@
 
     p {
       color: abs.$gray;
+      line-height: 1.4;
     }
 
+    // ---------- FORMULARIO ----------
     form {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
     }
 
+    // ---------- INPUT GROUP ----------
     .input-group {
       display: flex;
       flex-direction: column;
@@ -55,12 +62,47 @@
       }
     }
 
+    // ---------- TEXTO SECUNDARIO ----------
     .texto-secundario {
       font-size: .9rem;
 
       a {
         color: abs.$blue-dark;
         text-decoration: underline;
+      }
+    }
+  }
+}
+
+// =============================
+//  TABLET
+// =============================
+@include abs.breakpoint(tablet) {
+  .registro {
+    padding: 3rem 2rem;
+
+    &__form {
+      max-width: 420px;
+
+      h1 {
+        font-size: 2.4rem;
+      }
+    }
+  }
+}
+
+// =============================
+//  DESKTOP
+// =============================
+@include abs.breakpoint(desktop) {
+  .registro {
+    padding: 4rem 0;
+
+    &__form {
+      max-width: 450px;
+
+      h1 {
+        font-size: 2.8rem;
       }
     }
   }
