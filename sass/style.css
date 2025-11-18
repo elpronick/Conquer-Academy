@@ -145,7 +145,6 @@ HERO (BASE)
   gap: 2rem;
   align-items: center;
 }
-
 .hero__content {
   display: flex;
   flex-direction: column;
@@ -162,7 +161,6 @@ HERO (BASE)
   font-size: 1rem;
   color: #83869A;
 }
-
 .hero__image video {
   width: 100%;
   border-radius: 16px;
